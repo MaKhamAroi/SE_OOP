@@ -28,13 +28,11 @@ type (
 )
 
 func (m ComputerPC) Input() {
-	fmt.Println("Starting computer pressing turn on the computer PC:",
-		m.Brand, m.CPU, m.RAM, m.OS, m.PowerSupply)
+	fmt.Println("Starting computer pressing turn on the computer PC:",m.Brand, m.CPU, m.RAM, m.OS, m.PowerSupply)
 }
 
 func (m ComputerLaptop) Input() {
-	fmt.Println("Starting computer pressing turn on the computer laptop:",
-		m.Brand, m.CPU, m.RAM, m.OS, m.Battery, m.IsCanPress)
+	fmt.Println("Starting computer pressing turn on the computer laptop:",m.Brand, m.CPU, m.RAM, m.OS, m.Battery, m.IsCanPress)
 }
 
 func main() {
