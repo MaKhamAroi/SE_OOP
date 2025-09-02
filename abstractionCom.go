@@ -8,11 +8,13 @@ type (
 	}
 
 	ComputerPC struct {
-		Brand        string
-		CPU          string
-		RAM          string
-		OS           string
-		power_supply string
+		Brand       string
+		Start       string
+		Shutdown    string
+		CPU         string
+		RAM         string
+		OS          string
+		PowerSupply string
 	}
 
 	ComputerLaptop struct {
@@ -26,20 +28,24 @@ type (
 )
 
 func (m ComputerPC) Input() {
-	fmt.Println("Starting computer pressing turn on the computer PC: ", m.Brand, m.CPU, m.RAM, m.OS, m.power_supply)
+	fmt.Println("Starting computer pressing turn on the computer PC:",
+		m.Brand, m.CPU, m.RAM, m.OS, m.PowerSupply)
 }
 
 func (m ComputerLaptop) Input() {
-	fmt.Println("Starting computer pressing turn on the computer laptop: ", m.Brand, m.CPU, m.RAM, m.OS, m.Battery, m.IsCanPress)
+	fmt.Println("Starting computer pressing turn on the computer laptop:",
+		m.Brand, m.CPU, m.RAM, m.OS, m.Battery, m.IsCanPress)
 }
 
 func main() {
 	computerPC := ComputerPC{
-		Brand:        "Dell",
-		CPU:          "Intel Core i7",
-		RAM:          "16GB",
-		OS:           "Windows,MacOS",
-		power_supply: "65W",
+		Brand:       "Dell",
+		Start:       "Power Button Pressed",
+		Shutdown:    "Shutdown Complete",
+		CPU:         "Intel Core i7",
+		RAM:         "16GB",
+		OS:          "Windows, MacOS",
+		PowerSupply: "65W",
 	}
 
 	computerLaptop := ComputerLaptop{
