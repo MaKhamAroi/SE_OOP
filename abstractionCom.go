@@ -9,8 +9,6 @@ type (
 
 	ComputerPC struct {
 		Brand       string
-		Start       string
-		Shutdown    string
 		CPU         string
 		RAM         string
 		OS          string
@@ -38,8 +36,6 @@ func (m ComputerLaptop) Input() {
 func main() {
 	computerPC := ComputerPC{
 		Brand:       "Dell",
-		Start:       "Power Button Pressed",
-		Shutdown:    "Shutdown Complete",
 		CPU:         "Intel Core i7",
 		RAM:         "16GB",
 		OS:          "Windows, MacOS",
